@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavani Ponnada - Portfolio</title>
+ <!-- <link rel="stylesheet" href="style.css">-->
+  <style>
+    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #000; /* black background */
+  color: white;
+  text-align: center;
+}
+
+/* Header (logo + navbar) */
+header {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 20px 50px;
+  background: #000; /* black background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;  /* white logo text */
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;  /* white links */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2575fc; /* blue hover */
+}
+
+/* Home Section */
+/* Home Section */
+#Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000000, #111111, #1a1a1a); /* stylish black shades */
+  color: white;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.home-content h1 .name {
+  color: #2575fc;
+}
+
+.home-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Buttons Side by Side */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.home-buttons .btn {
+  background: #2575fc;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.home-buttons .btn:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* About Section */
+#about {
+  background: #111;  /* dark gray to contrast with black body */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2575fc;
+}
+
+/* Container for photo + content */
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* makes it responsive */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* content left-aligned */
+}
+
+/* Photo */
+.about-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Content */
+.about-content {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+/* Skills Section */
+#skills {
+  padding: 80px 20px;
+  background: #111; /* same theme as projects */
+  color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+#skills p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.skill-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Skill Tags */
+.skill-tags span {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+
+
+
+/* Projects Section */
+#projects {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #2575fc;
+  margin-bottom: 10px;
+}
+
+#projects p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Filter Buttons */
+.project-filters {
+  margin-bottom: 40px;
+}
+
+.project-filters button {
+  background: transparent;
+  border: 1px solid #2575fc;
+  color: #2575fc;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-filters button:hover,
+.project-filters .active {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Tags */
+.tags span {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-right: 5px;
+}
+
+/*image */
+.project-card img {
+  width: 100%;
+  height: 200px;       /* fixed height */
+  object-fit: cover;   /* crops image nicely */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Resume Section */
+#resume {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+#resume h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+.resume-buttons {
+  margin-top: 20px;
+}
+
+.resume-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border: 2px solid #2575fc;
+  border-radius: 8px;
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-buttons .btn:hover {
+  background: #2575fc;
+  color: #fff;
+}
+/* Achievements Section */
+#achievements {
+  padding: 80px 20px;
+  background: #111; /* same as projects */
+  color: #fff;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc; /* same blue as projects */
+}
+
+#achievements p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Grid Layout */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Achievement Card */
+.achievement-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.badge.green {
+  background: #28a745; /* green */
+}
+
+.badge.yellow {
+  background: #ffc107; /* yellow */
+  color: #000;
+}
+
+.badge.blue {
+  background: #2575fc; /* project theme blue */
+}
+
+
+
+/* Experience Section */
+#experience {
+  padding: 80px 20px;
+  background: #111; /* dark like projects */
+  color: #fff;
+  text-align: center;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+#experience p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Filter Buttons */
+.experience-filters {
+  margin-bottom: 40px;
+}
+
+.experience-filters button {
+  background: transparent;
+  border: 1px solid #2575fc;
+  color: #2575fc;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-filters button:hover,
+.experience-filters .active {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Experience Grid */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Experience Card */
+.experience-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+}
+
+.experience-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.experience-card h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+.experience-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Tags */
+.experience-card .tag {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+
+
+/* Contact Section */
+#contact {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+#contact p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}
+  </style>
+
+</head>
+<body>
+ 
+  
+  <!-- Navigation -->
+<header>
+  <div class="logo">Portfolio</div>
+  <nav>
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+ <!-- Home Section -->
+<section id="Home">
+  <div class="home-content">
+    <h1>Hi, I’m <span class="name">Bhavani Ponnada</span> 👋</h1>
+    <h3>Final Year B.Tech Student | Web Developer | Problem Solver</h3>
+    <p>
+      Passionate about building modern web applications, exploring new
+      technologies, and solving real-world problems through code.
+    </p>
+
+    <div class="home-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#resume" class="btn">Resume</a>
+    </div>
+  </div>
+</section>
+
+  <section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    
+    <!-- Photo -->
+    <div class="about-photo">
+      <img src="about1.jpg" alt="Bhavani Ponnada Photo">
+    </div>
+    
+    <!-- Content -->
+    <div class="about-content">
+      <p>
+        Hello! I’m <strong>Bhavani Ponnada</strong>, a final-year B.Tech student specializing in Computer Science.  
+        I am passionate about <b>web development</b>, especially creating responsive and user-friendly applications.  
+      </p>
+      <p>
+        My career goal is to become a <b>Full-Stack Developer</b> and work on innovative projects that make a real-world impact.  
+        I have hands-on experience with <b>HTML, CSS, JavaScript, React, Node.js, and MongoDB</b>.  
+      </p>
+      <p>
+        Apart from coding, I enjoy <b>problem-solving, participating in hackathons, and learning new technologies</b>.  
+        I strongly believe in continuous growth and teamwork.  
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <p>Here are the technologies and tools I work with:</p>
+
+  <div class="skills-grid">
+    <!-- Programming Languages -->
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <div class="skill-tags">
+        <span>JavaScript</span>
+        <span>Python</span>
+        
+      </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="skill-card">
+      <h3>Web Development</h3>
+      <div class="skill-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>React.js</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+      </div>
+    </div>
+
+    <!-- Database -->
+    <div class="skill-card">
+      <h3>Databases</h3>
+      <div class="skill-tags">
+        <span>MongoDB</span>
+        <span>MySQL</span>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-card">
+      <h3>Tools & Platforms</h3>
+      <div class="skill-tags">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>VS Code</span>
+        <span>Postman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section 
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Employee Management System</strong> – MERN stack app to manage employee data.</li>
+      <li><strong>Event Planner Assistant</strong> – AI-powered MERN app for event management.</li>
+      <li><strong>Speech Detection</strong> – Project on voice recognition and processing.</li>
+    </ul>
+  </section>-->
+  <!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <p>A showcase of my recent work and creative projects.</p>
+
+  <!-- Filter Buttons -->
+  <div class="project-filters">
+    <button class="active">All</button>
+    <button>Web Development</button>
+    <button>Full Stack Development</button>
+    <button>Frontend</button>
+    <button>AI/Voice</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="project-grid">
+  
+    <!-- Event Planner Assistant -->
+    <div class="project-card">
+      <img src="./images/eventplanner1.png" alt="Event Planner Assistant">
+      <h3>Event Planner Assistant (MERN Stack)</h3>
+      <p>An AI-powered web app that helps businesses generate marketing content and plan customer-centric events efficiently.</p>
+      <div class="tags">
+        <span>MERN</span>
+        <span>AI</span>
+        <span>React</span>
+      </div>
+      
+    </div>
+
+    <!-- MediMap -->
+    <div class="project-card">
+      <img src="./images/medimap1.png" alt="MediMap">
+      <h3>MediMap (MERN Stack)</h3>
+      <p>A healthcare web app for managing medical data with a user-friendly interface and efficient data storage.</p>
+      <div class="tags">
+        <span>MERN</span>
+        <span>Node.js</span>
+        <span>MongoDB</span>
+      </div>
+    </div>
+
+    <!-- Personal Portfolio -->
+    <div class="project-card">
+      <img src="./images/portfolio1.png" alt="Personal Portfolio">
+      
+      <h3>Personal Portfolio Website</h3>
+      <p>A professional portfolio to showcase my technical career, skills, and projects with a responsive and engaging UI.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="project-card">
+      <img src="./images/todo1.png" alt="To-Do List App">
+      <h3>To-Do List App</h3>
+      <p>A simple and interactive to-do list application that helps users manage tasks with add, edit, and delete options.</p>
+      <div class="tags">
+           <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+    <!-- Speech Detection -->
+    <div class="project-card">
+      <img src="./images/speechdeteh1.png" alt="Speech Detection App">
+      <h3>Speech Detection App</h3>
+      <p>A web app that converts speech to text in real time, leveraging browser APIs for an interactive experience.</p>
+      <div class="tags">
+        <span>JavaScript</span>
+        <span>Web Speech API</span>
+      </div>
+    </div>
+
+    <!-- Digital Clock -->
+    <div class="project-card">
+      <img src="./images/degiwatch1.png" alt="Digital Clock">
+      <h3>Digital Clock</h3>
+      <p>A stylish digital clock built using HTML, CSS, and JavaScript to display real-time hours, minutes, and seconds.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Experience Section -->
+ <!-- Experience Section -->
+<section id="experience">
+  <h2>Experience</h2>
+  <p>A showcase of my internships and workshops & hackathons.</p>
+
+  <!-- Filter Buttons -->
+  <div class="experience-filters">
+       <button class="active">All</button>
+    <button>Internships</button>
+    <button>Workshops & Hackathons</button>
+  </div>
+
+  <!-- Experience Grid -->
+  <div class="experience-grid">
+
+    <!-- Internship 1 -->
+    <div class="experience-card">
+      <h3>AI with MERN Stack Intern</h3>
+      <h4>Brainovision Solutions Pvt. Ltd.</h4>
+      <p>Worked on AI-integrated MERN stack projects, including chatbots, content generation, and responsive web apps. Hands-on exposure to full-stack development.</p>
+      <span class="tag">MERN</span>
+      <span class="tag">AI</span>
+      <span class="tag">Full Stack</span>
+    </div>
+
+    <!-- Internship 2 -->
+    <div class="experience-card">
+      <h3>Frontend Intern</h3>
+      <h4>Micro IT Solutions</h4>
+      <p>Worked on personal portfolio and to-do list apps using HTML, CSS, and JavaScript. Focused on responsive design and interactive features.</p>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+    </div>
+
+    <!-- Workshop 1 -->
+    <div class="experience-card">
+      <h3>Full-Stack development  Workshop</h3>
+      <h4>Brainovision Solutions Pvt. Ltd.</h4>
+      <p>Participated in a workshop and hackthon Full Stack Web Development, where I worked on developing an SDG 17 “Partnerships for the Goals” website and explored innovative approaches using Design Thinking.</p>
+
+      <span class="tag">Frontend</span>
+      <span class="tag">Backend</span>
+    </div>
+
+    <!-- Workshop 2 -->
+    <div class="experience-card">
+      <h3>Gen AI Hackathon</h3>
+      <h4>Zentrobyte Solutions</h4>
+      <p>Participated in a 4-day workshop and 24-hour hackathon on Generative AI, developing an AI-powered project (PICSCRIPT website: image ↔ caption generator).</p>
+      <span class="tag">Pipelines</span>
+      <span class="tag">Transformers</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Resume Section -->
+  <!-- Resume Section -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p>You can view or download my resume below:</p>
+  <div class="resume-buttons">
+    <a href="BhavaniResume.pdf" target="_blank" class="btn">📄 View Resume</a>
+   <!--- <a href="BhavaniResume.pdf" download class="btn">⬇️ Download Resume</a>-->
+  </div>
+</section>
+
+  <!-- Achievements Section -->
+  <!-- Achievements Section -->
+<section id="achievements">
+  <h2>Achievements</h2>
+  <p>A showcase of my academic and extracurricular achievements.</p>
+
+  <div class="achievements-grid">
+
+    <!-- Science Day -->
+    <div class="achievement-card">
+      <span class="badge green">Science Day Competition - First Prize Winner</span>
+      <p>I won the First Prize in the Science Day Competition in my school, where I presented an innovative project on potato battery, recognized for creativity and scientific approach.</p>
+    </div>
+
+    <!-- Quiz Competition -->
+    <div class="achievement-card">
+      <span class="badge yellow">🏆 1st Prize Winner</span>
+      <p>Won First Prize in the Quiz Competition during freshers party 2024 at Sri Sivani College, competing with 50+ participants across departments.</p>
+    </div>
+
+    <!-- CGPA -->
+    <div class="achievement-card">
+      <span class="badge green">CGPA: 8.2 / 10</span>
+      <p>I secured a CGPA of 8.2/10, ranking among the top 5% of my batch at Sri Sivani College, excelling in Data Structures, Web Development, and Machine Learning.</p>
+    </div>
+
+    <!-- Workshops & Hackathons -->
+    <div class="achievement-card">
+      <span class="badge blue">Workshops & Hackathons</span>
+      <p>Actively participated in multiple workshops and 24-hour hackathons, including GenAI
+         workshops and Full-Stack hackathons, gaining practical exposure to real-world problem-solving.</p>
+    </div>
+
+  </div>
+</section>
+
+ <!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out by filling the form below 👇</p>
+<form id="contactForm" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<!-- Success Message -->
+<p id="formMessage" style="display:none; color: #28a745; margin-top: 15px; font-weight: bold;">
+  ✅ Thank you! Your message has been submitted.
+</p>
+
+<!-- Footer -->
+<footer>
+  <p>📧 <a href="mailto:bhavaniponnada2105@gmail.com">bhavaniponnada2105@gmail.com</a> | 
+     📞 8978359022 | 
+     🔗 <a href="https://www.linkedin.com/in/bhavaniponnada2105" target="_blank">LinkedIn</a> | 
+     💻 <a href="https://github.com/bhavani2105/Micro-IT-Internship" target="_blank">GitHub</a>
+  </p>
+  <p>© 2025 Bhavani Ponnada | Portfolio</p>
+</footer>
+
+
+  <!-- Script for role change animation -->
+ <!--<script src="script.js"></script>-->
+ <script>
+    document.querySelectorAll(".experience-filters button, .project-filters button").forEach(button => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+
+    // Remove active class from all buttons
+    button.parentElement.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    // Select cards based on section
+    const section = button.closest("section").id;
+    const cards = document.querySelectorAll(`#${section} .experience-card, #${section} .project-card`);
+
+    cards.forEach(card => {
+      if (filter === "all" || card.getAttribute("data-category") === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+// Contact Form Script
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent page reload
+
+  // Show success message
+  document.getElementById("formMessage").style.display = "block";
+
+  // Clear the form
+  this.reset();
+
+  // Hide message after 5 seconds
+  setTimeout(() => {
+    document.getElementById("formMessage").style.display = "none";
+  }, 5000);
+});
+ </script>
+</body>
+</html>
+css code                  /* General styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #000; /* black background */
+  color: white;
+  text-align: center;
+}
+
+/* Header (logo + navbar) */
+header {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 20px 50px;
+  background: #000; /* black background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;  /* white logo text */
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;  /* white links */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2575fc; /* blue hover */
+}
+
+/* Home Section */
+/* Home Section */
+#Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000000, #111111, #1a1a1a); /* stylish black shades */
+  color: white;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.home-content h1 .name {
+  color: #2575fc;
+}
+
+.home-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Buttons Side by Side */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.home-buttons .btn {
+  background: #2575fc;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.home-buttons .btn:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* About Section */
+#about {
+  background: #111;  /* dark gray to contrast with black body */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2575fc;
+}
+
+/* Container for photo + content */
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* makes it responsive */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* content left-aligned */
+}
+
+/* Photo */
+.about-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Content */
+.about-content {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+/* Skills Section */
+#skills {
+  padding: 80px 20px;
+  background: #111; /* same theme as projects */
+  color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+#skills p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.skill-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Skill Tags */
+.skill-tags span {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+
+
+
+/* Projects Section */
+#projects {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #2575fc;
+  margin-bottom: 10px;
+}
+
+#projects p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Filter Buttons */
+.project-filters {
+  margin-bottom: 40px;
+}
+
+.project-filters button {
+  background: transparent;
+  border: 1px solid #2575fc;
+  color: #2575fc;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-filters button:hover,
+.project-filters .active {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Tags */
+.tags span {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-right: 5px;
+}
+
+/*image */
+.project-card img {
+  width: 100%;
+  height: 200px;       /* fixed height */
+  object-fit: cover;   /* crops image nicely */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Resume Section */
+#resume {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+#resume h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+.resume-buttons {
+  margin-top: 20px;
+}
+
+.resume-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border: 2px solid #2575fc;
+  border-radius: 8px;
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-buttons .btn:hover {
+  background: #2575fc;
+  color: #fff;
+}
+/* Achievements Section */
+#achievements {
+  padding: 80px 20px;
+  background: #111; /* same as projects */
+  color: #fff;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc; /* same blue as projects */
+}
+
+#achievements p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Grid Layout */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Achievement Card */
+.achievement-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.badge.green {
+  background: #28a745; /* green */
+}
+
+.badge.yellow {
+  background: #ffc107; /* yellow */
+  color: #000;
+}
+
+.badge.blue {
+  background: #2575fc; /* project theme blue */
+}
+
+
+
+/* Experience Section */
+#experience {
+  padding: 80px 20px;
+  background: #111; /* dark like projects */
+  color: #fff;
+  text-align: center;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+#experience p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Filter Buttons */
+.experience-filters {
+  margin-bottom: 40px;
+}
+
+.experience-filters button {
+  background: transparent;
+  border: 1px solid #2575fc;
+  color: #2575fc;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-filters button:hover,
+.experience-filters .active {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Experience Grid */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Experience Card */
+.experience-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+}
+
+.experience-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.experience-card h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+.experience-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Tags */
+.experience-card .tag {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+
+
+/* Contact Section */
+#contact {
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+#contact p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}
+js code            // Filtering function for projects, experience, etc.
+document.querySelectorAll(".experience-filters button, .project-filters button").forEach(button => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+
+    // Remove active class from all buttons
+    button.parentElement.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    // Select cards based on section
+    const section = button.closest("section").id;
+    const cards = document.querySelectorAll(`#${section} .experience-card, #${section} .project-card`);
+
+    cards.forEach(card => {
+      if (filter === "all" || card.getAttribute("data-category") === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+// Contact Form Script
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent page reload
+
+  // Show success message
+  document.getElementById("formMessage").style.display = "block";
+
+  // Clear the form
+  this.reset();
+
+  // Hide message after 5 seconds
+  setTimeout(() => {
+    document.getElementById("formMessage").style.display = "none";
+  }, 5000);
+});
+      you can create a good professional design portfolio then i can access the code or not i need the code to re run in my vs code
